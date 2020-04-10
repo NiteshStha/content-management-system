@@ -54,6 +54,7 @@ class PostsController extends Controller
             'content' => $request->content,
             'image' => $image,
             'published_at' => $request->published_at,
+            'user_id' => auth()->user()->id,
             'category_id' => $request->category
         ]);
 
