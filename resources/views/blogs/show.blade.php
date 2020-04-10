@@ -4,6 +4,14 @@
     {{ $post->title }}
 @endsection
 
+@section('css')
+    <style>
+        .contents > *{
+            text-align: justify !important;
+        }
+    </style>
+@endsection
+
 @section('header')
 <!-- Header -->
 <header
@@ -56,12 +64,14 @@
     <div class="section" id="section-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-lg-8 mx-auto contents">
                     <p class="text-justify">
                         {!! $post->content !!}
                     </p>
                 </div>
             </div>
+
+            <hr>
 
             <div class="row">
                 <div class="col-lg-8 mx-auto">
