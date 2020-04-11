@@ -112,7 +112,8 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js" defer></script>
     <script defer>
         flatpickr('#published_at',{
-            enableTime: true
+            enableTime: true,
+            enableSeconds: true
         });
 
         $(document).ready(function() {

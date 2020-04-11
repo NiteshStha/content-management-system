@@ -62,7 +62,7 @@ class PostsTableSeeder extends Seeder
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tempore.',
             'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tempore.',
             'category_id' => $category3->id,
-            'image' => 'posts/8.jpg'
+            'image' => 'posts/3.jpg'
         ]);
 
         $post4 = $author2->posts()->create([
@@ -71,6 +71,38 @@ class PostsTableSeeder extends Seeder
             'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tempore.',
             'category_id' => $category2->id,
             'image' => 'posts/4.jpg'
+        ]);
+
+        $post5 = $author2->posts()->create([
+            'title' => 'New published books to read by a product designer',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tempore.',
+            'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tempore.',
+            'category_id' => $category3->id,
+            'image' => 'posts/5.jpg'
+        ]);
+
+        $post6 = $author2->posts()->create([
+            'title' => 'This is why it\'s time to ditch dress codes at work',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tempore.',
+            'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tempore.',
+            'category_id' => $category1->id,
+            'image' => 'posts/6.jpg'
+        ]);
+
+        $post7 = $author1->posts()->create([
+            'title' => 'Self improvement/Self-Hypnosis',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tempore.',
+            'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tempore.',
+            'category_id' => $category2->id,
+            'image' => 'posts/7.jpg'
+        ]);
+
+        $post8 = $author1->posts()->create([
+            'title' => 'Health & Fitness for Busy People',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tempore.',
+            'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tempore.',
+            'category_id' => $category1->id,
+            'image' => 'posts/8.jpg'
         ]);
 
         $tag1 = Tag::create([
@@ -93,5 +125,9 @@ class PostsTableSeeder extends Seeder
         $post2->tags()->attach([$tag3->id, $tag4->id]);
         $post3->tags()->attach([$tag1->id, $tag3->id]);
         $post4->tags()->attach([$tag2->id, $tag4->id]);
+        $post5->tags()->attach([$tag1->id, $tag2->id]);
+        $post6->tags()->attach([$tag1->id, $tag4->id]);
+        $post7->tags()->attach([$tag2->id, $tag3->id]);
+        $post8->tags()->attach([$tag2->id, $tag4->id]);
     }
 }
